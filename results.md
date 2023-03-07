@@ -1,6 +1,14 @@
 ## Results
 
+### Inputs
+```shell
+ ls -lrth *.txt
+-rw-r--r--  1 simar  staff    11B Mar  6 21:52 small.txt
+-rw-------  1 simar  staff   100M Mar  6 23:01 big.txt
+```
+
 ### Small file
+```shell
 goos: darwin
 goarch: amd64
 pkg: github.com/simar7/copy-test
@@ -18,9 +26,10 @@ SmallFile-8      0.000 ± 0%   0.000 ± 0%  ~ (p=1.000 n=10000) ¹
             │   allocs/op   │ allocs/op   vs base               │
 SmallFile-8      0.000 ± 0%   0.000 ± 0%  ~ (p=1.000 n=10000) ¹
 ¹ all samples are equal
-
+```
 
 ### Big file
+```shell
 goos: darwin
 goarch: amd64
 pkg: github.com/simar7/copy-test
@@ -38,4 +47,4 @@ BigFile-8    0.000 ± 0%   0.000 ± 0%  ~ (p=1.000 n=100) ¹
           │  allocs/op  │ allocs/op   vs base             │
 BigFile-8    0.000 ± 0%   0.000 ± 0%  ~ (p=1.000 n=100) ¹
 ¹ all samples are equal
-
+```

@@ -35,3 +35,19 @@ func BenchmarkBigFile(b *testing.B) {
 	//ReadAllFunc("big.txt")
 	CopyFunc("big.txt")
 }
+
+func BenchmarkCopyAndUnmarshal(b *testing.B) {
+	b.ReportAllocs()
+	CopyAndUnmarshal("small.txt")
+}
+
+func BenchmarkJSONDecode(b *testing.B) {
+	b.ReportAllocs()
+	JSONDecode("small.txt")
+}
+
+func BenchmarkJSON(b *testing.B) {
+	b.ReportAllocs()
+	CopyAndUnmarshal("small.txt")
+	//JSONDecode("small.txt")
+}

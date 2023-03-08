@@ -41,13 +41,14 @@ func BenchmarkCopyAndUnmarshal(b *testing.B) {
 	CopyAndUnmarshal("small.txt")
 }
 
-func BenchmarkJSONDecode(b *testing.B) {
-	b.ReportAllocs()
-	JSONDecode("small.txt")
-}
+//
+//func BenchmarkJSONDecode(b *testing.B) {
+//	b.ReportAllocs()
+//	JSONDecode("small.txt")
+//}
 
 func BenchmarkJSON(b *testing.B) {
 	b.ReportAllocs()
-	CopyAndUnmarshal("small.txt")
-	//JSONDecode("small.txt")
+	//CopyAndUnmarshal("small.txt")
+	JSONDecode("small.txt")
 }
